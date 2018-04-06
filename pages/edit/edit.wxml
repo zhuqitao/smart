@@ -1,0 +1,14 @@
+<view class="content">
+  <button class="add-user" size="mini">
+    新增人员+
+  </button>
+  <view class="user-list">
+    <view class="item">
+      <label class="label">
+        <checkbox></checkbox>
+        张三
+      </label>
+      <checkbox></checkbox>
+    </view>
+  </view>
+</view>

@@ -14,16 +14,20 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath": "img/blcindex.png",
-        "selectedIconPath": "img/tabindex.png",
+        "iconPath": "img/index.png",
+        "selectedIconPath": "img/index_active.png",
         "text": "主页"
       },
       {
         "pagePath": "pages/edit/edit",
+        "iconPath": "img/edit.png",
+        "selectedIconPath": "img/edit_active.png",
         "text": "编辑"
       },
       {
         "pagePath": "pages/bill/bill",
+        "iconPath": "img/bill.png",
+        "selectedIconPath": "img/bill_active.png",
         "text": "账单"
       }
     ]

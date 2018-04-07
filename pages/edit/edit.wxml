@@ -1,14 +1,55 @@
 <view class="content">
-  <button class="add-user" size="mini">
-    新增人员+
-  </button>
+  <view class="add-user">
+    <button size="mini" type="primary">
+      新增人员+
+    </button>
+  </view>
+  
   <view class="user-list">
     <view class="item">
-      <label class="label">
+      <label class="user">
         <checkbox></checkbox>
-        张三
+        <view class="info">
+          <view class="name">张三</view>
+          <view class="address">济南</view>
+        </view>
       </label>
-      <checkbox></checkbox>
+      <label class="tem">
+        <view class="info">临时结账</view>
+        <checkbox></checkbox>
+      </label>
     </view>
+
+    <view class="item">
+      <label class="user">
+        <checkbox></checkbox>
+        <view class="info">
+          <view class="name">张三</view>
+          <view class="address">济南</view>
+        </view>
+      </label>
+      <label class="tem">
+        <view class="info">临时结账</view>
+        <checkbox></checkbox>
+      </label>
+    </view>
+
+    <view class="item">
+      <label class="user">
+        <checkbox></checkbox>
+        <view class="info">
+          <view class="name">张三</view>
+          <view class="address">济南</view>
+        </view>
+      </label>
+      <label class="tem">
+        <view class="info">临时结账</view>
+        <checkbox></checkbox>
+      </label>
+    </view>
+    
+  </view>
+  <view class="submit">
+    <button type="primary">确定</button>
   </view>
 </view>

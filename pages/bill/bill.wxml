@@ -1,0 +1,11 @@
+<view class="bill">
+  <view class="switch">
+    <view class="tem">临时账单</view>
+    <view class="week active">周账单</view>
+  </view>
+  <view class="main">
+     <!-- <tem-bill></tem-bill>  -->
+      <week-bill></week-bill>  
+  </view>
+  
+</view>

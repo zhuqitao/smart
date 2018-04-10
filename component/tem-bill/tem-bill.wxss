@@ -1,0 +1,18 @@
+/* component/tem-bill/tem-bill.wxss */
+.tem-bill{
+  display: flex;
+  flex-direction: column;
+  width: 96%;
+  margin-left: 2%;
+}
+.tem-bill .item{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px #ddd;
+  padding: 10rpx 0;
+}
+.tem-bill .item .title{
+  min-width: 180rpx;
+  font-size: 14px;
+  color: #666;
+}

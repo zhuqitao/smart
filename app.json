@@ -1,8 +1,10 @@
 {
   "pages":[
-    "pages/index/index",
     "pages/bill/bill",
-    "pages/edit/edit"
+    "pages/index/index",
+    "pages/edit/edit",
+    "pages/add-user/add-user"
+    
   ],
   "window":{
     "backgroundTextStyle":"light",

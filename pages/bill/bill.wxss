@@ -1,0 +1,38 @@
+page {
+  height: 100%;
+}
+.bill{
+  height: 100%;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.bill .switch{
+  display: flex;
+  justify-content: center;
+  margin: 20rpx 0;
+}
+.bill .switch>view{
+  width: 240rpx;
+  height: 50rpx;
+  background-color: #aaa;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bill .switch>view.active{
+  background-color: #1AAD19;
+}
+.bill .switch .tem{
+  border-top-left-radius: 20rpx;
+  border-bottom-left-radius: 20rpx;
+}
+.bill .switch .week{
+  border-top-right-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+}
+.bill .main{
+  flex: 1;
+  background-color: #f8f8f8;
+}

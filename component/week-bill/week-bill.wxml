@@ -1,0 +1,26 @@
+<!--component/week-bill/week-bill.wxml-->
+<view class="week">
+  <view class="select">
+    <view class="week-select">
+      选择周 >
+    </view>
+  </view>
+  <view class="time">
+    <view class="week-info">本周 2018.4.5 ~ 2018.4.12</view>
+    <view class="detail">
+      收入： 200 支出：100 净赚： 100
+    </view>
+  </view>
+
+  <!-- 账单 -->
+  <view class="week-bill">
+    <view class="item">
+      <view class="people">
+        男： 5  女： 5
+      </view>
+      <view class="money">
+        入账： 200 应支出： 100 临时支出：50  净赚： 50
+      </view>
+    </view>
+  </view>
+</view>

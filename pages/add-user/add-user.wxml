@@ -1,0 +1,36 @@
+<view class="add-user">
+
+  <label class="name">
+    姓名：
+    <input placeholder='请输入姓名...'></input>
+  </label>
+
+  <label class="mobile">
+    电话：
+    <input class="mobile" placeholder='请输入电话...'></input>
+  </label>
+
+  <label class="address">
+    地址：
+    <input placeholder='请输入地址...'></input>
+  </label>
+
+  <label class="info">
+    备注：
+    <textarea placeholder='备注...'></textarea>
+  </label>
+  
+  <radio-group class="sex">
+    <label class="man">
+      男
+      <radio value="man"></radio>
+    </label>
+    <label class="woman">
+      女
+      <radio value="woman"></radio>
+    </label>
+  </radio-group>
+
+  <!-- submit -->
+  <button class="submit" type='primary'>确定</button>
+</view>

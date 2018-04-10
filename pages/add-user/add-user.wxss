@@ -1,0 +1,31 @@
+page {
+  background-color: #f0f0f0
+}
+.add-user {
+  padding: 20rpx;
+  background-color: #ffffff;
+  font-size: 14px;
+}
+.add-user>label{
+  display: flex;
+  align-items: center;
+  margin: 20rpx 0;
+}
+.add-user label input {
+  flex: 1;
+  border: solid 1px #ddd;
+  padding: 10rpx;
+  border-radius: 10rpx
+}
+.add-user label textarea {
+  height: 160rpx;
+  border: solid 1px #ddd;
+  padding: 10rpx;
+  border-radius: 10rpx
+}
+.add-user .sex .woman{
+  margin-left: 50rpx;
+}
+.add-user .submit{
+  margin: 30rpx 0 10rpx 0;
+}

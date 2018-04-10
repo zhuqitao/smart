@@ -1,0 +1,14 @@
+/* component/week-bill/week-bill.wxss */
+.week{
+  font-size: 14px;
+}
+.week .select{
+  background-color: #f8f8f8;
+  color: #666;
+  padding: 16rpx;
+  border-bottom: solid 1px #e0e0e0;
+}
+.week .time{
+  background-color: #f0f0f0;
+  padding: 16rpx;
+}

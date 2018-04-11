@@ -7,12 +7,15 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    billType: 'tem' 
   },
   //事件处理函数
-  bindViewTap: function () {
-    wx.navigateTo({
-      url: '../logs/logs'
+
+  // 选择临时账单 周账单
+  selectBill: function (e) {
+    this.setData({
+      billType: e.target.dataset.type
     })
   },
   onLoad: function () {

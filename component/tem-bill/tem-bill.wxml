@@ -1,32 +1,69 @@
 <!--component/tem-bill/tem-bill.wxml-->
 <!-- <text>component/tem-bill/tem-bill.wxml</text> -->
 <view class="tem-bill">
-  <view class="item time">
-    <view class="time-title title">时间：</view>
-    <view class="time-info">2018-4-20</view>
+  <view class="head">
+    <view class="time">2018-4-12</view>
+    <view class="income">
+      <view>收入金额：</view>
+      <view class="money">￥200</view>
+    </view>
+    <view class="pay">
+      <view>支出金额：</view>
+      <view class="money">￥100</view>
+    </view>
+    <!-- <view class="pay-tem">
+      <view>临时支出：</view>
+      <view class="money">￥50</view>
+    </view> -->
+    <view class="earn">
+      <view>净赚：</view>
+      <view class="money">￥50</view>
+    </view>
   </view>
-  <view class="item man">
-    <view class="man-title title">男：</view>
-    <view class="man-info">5人</view>
-  </view>
-  <view class="item woman">
-    <view class="woman-title title">女：</view>
-    <view class="woman-info">5人</view>
-  </view>
-  <view class="item people">
-    <view class="people-title title">总人数：</view>
-    <view class="people-info">10人</view>
-  </view>
-  <view class="item pay">
-    <view class="pay-title title">支出金额：</view>
-    <view class="pay-info">100元</view>
-  </view>
-  <view class="item income">
-    <view class="income-title title">入账金额：</view>
-    <view class="income-info">200元</view>
-  </view>
-  <view class="item earn">
-    <view class="earn-title title">赚取金额：</view>
-    <view class="earn-info">100元</view>
+
+  <view class="detail">
+    <view class="title">明细</view>
+
+    <view class="time item">
+      <view class="msg">时间：</view>
+      <view class="info">2018-4-12</view>
+    </view>
+
+    <view class="people item">
+      <view class="total">
+        <view class="msg">总人数：</view>
+        <view class="num">10人</view>
+      </view>
+      <view class="info">
+        <view class="man">
+          <view class="msg">男：</view>
+          <view class="num">5人</view>
+        </view>
+        <view class="woman">
+          <view class="msg">女：</view>
+          <view class="num">5人</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="income item">
+      <view class="msg">收入金额：</view>
+      <view class="money">￥200</view>
+    </view>
+
+    <view class="pay item">
+      <view class="msg">支出金额：</view>
+      <view class="money">￥100</view>
+    </view>
+
+    <view class="pay-tem item">
+      <view class="msg">临时支出：</view>
+      <view class="money">￥50</view>
+    </view>
+
+    <view class="earn item">
+      <view class="msg">净赚：</view>
+      <view class="money">￥50</view>
+    </view>
   </view>
 </view>

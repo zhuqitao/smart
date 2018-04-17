@@ -17,14 +17,9 @@ page {
   padding: 10rpx;
   border-radius: 10rpx
 }
-.add-user label textarea {
-  height: 160rpx;
-  border: solid 1px #ddd;
-  padding: 10rpx;
-  border-radius: 10rpx
-}
-.add-user .sex .woman{
-  margin-left: 50rpx;
+
+.sex label, .type label{
+  min-width: 400rpx;
 }
 .add-user .submit{
   margin: 30rpx 0 10rpx 0;

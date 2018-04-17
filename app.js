@@ -18,8 +18,12 @@ App({
           },
           data: {
             code: res.code
+          },
+          success: res => {
+            this.globalData.token = res.data.body.token
           }
         })
+        
       }
     })
     // 获取用户信息
@@ -43,7 +47,28 @@ App({
       }
     })
   },
+  ajax: function (url, method, data) {
+    return new Promise((resolve, reject) => {
+      wx.request({
+        url: url,
+        method: method,
+        data: data,
+        header: {
+          'Authentication': this.globalData.token, // 默认值
+          "content-type": method === 'POST' ? "application/x-www-form-urlencoded" :"application/json"
+        },
+        success: res => {
+          resolve(res)
+        },
+        fail: err => {
+          reject(err)
+        }
+      })
+    })
+    
+  },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    token: ''
   }
 })

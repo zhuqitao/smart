@@ -2,35 +2,48 @@
 
   <label class="name">
     姓名：
-    <input placeholder='请输入姓名...'></input>
+    <input placeholder='请输入姓名...' bindinput='nameInp'></input>
   </label>
 
   <label class="mobile">
     电话：
-    <input class="mobile" placeholder='请输入电话...'></input>
+    <input class="mobile" placeholder='请输入电话...' bindinput='mobileInp'></input>
   </label>
 
   <label class="address">
     地址：
-    <input placeholder='请输入地址...'></input>
+    <input placeholder='请输入地址...' bindinput='addressInp'></input>
   </label>
 
-  <label class="info">
-    备注：
-    <textarea placeholder='备注...'></textarea>
+  <label class="payOffer">
+    工资标准：
+    <input placeholder='请输入工资标准...' bindinput='payOfferInp'></input>
   </label>
+
   
-  <radio-group class="sex">
+  
+  <radio-group class="sex" bindchange="sexChange">
     <label class="man">
       男
-      <radio value="man"></radio>
+      <radio value="1"></radio>
     </label>
     <label class="woman">
       女
-      <radio value="woman"></radio>
+      <radio value="2"></radio>
+    </label>
+  </radio-group>
+
+  <radio-group class="type" bindchange="typeChange">
+    <label class="public">
+      公共
+      <radio value="1"></radio>
+    </label>
+    <label class="private">
+      私有
+      <radio value="2"></radio>
     </label>
   </radio-group>
 
   <!-- submit -->
-  <button class="submit" type='primary'>确定</button>
+  <button class="submit" type='primary' bindtap='submit'>确定</button>
 </view>

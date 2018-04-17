@@ -6,12 +6,22 @@ Page({
    * 页面的初始数据
    */
   data: {
+    state: 0,
     name: '',
     phone: '',
     address: '',
     payOfferId: '', // 工资标准
     type: '',       // 类型 1、公共2、私有
     sex: '',        // 性别 1 男 2 女
+  },
+
+  // 输入框 获取焦点
+  focus (e) {
+    console.log(e)
+    this.setData({
+      state: e.target.dataset.state
+    })
+    console.log(this.data.state)
   },
 
   nameInp: function (e) {

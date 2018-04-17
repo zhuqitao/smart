@@ -1,23 +1,23 @@
 <view class="add-user">
 
   <label class="name">
-    姓名：
-    <input placeholder='请输入姓名...' bindinput='nameInp'></input>
+    <view class="label">姓名：</view>
+    <input class="{{state==1?'active':''}}" data-state="1" bindfocus='focus' bindinput='nameInp'></input>
   </label>
 
   <label class="mobile">
-    电话：
-    <input class="mobile" placeholder='请输入电话...' bindinput='mobileInp'></input>
+    <view class="label">电话：</view>
+    <input class="{{state==2?'active':''}}" data-state="2" bindfocus='focus' bindinput='mobileInp'></input>
   </label>
 
   <label class="address">
-    地址：
-    <input placeholder='请输入地址...' bindinput='addressInp'></input>
+    <view class="label">地址：</view>
+    <input class="{{state==3?'active':''}}" data-state="3" bindfocus='focus' bindinput='addressInp'></input>
   </label>
 
   <label class="payOffer">
-    工资标准：
-    <input placeholder='请输入工资标准...' bindinput='payOfferInp'></input>
+    <view class="label">工资标准：</view>
+    <input class="{{state==4?'active':''}}" data-state="4" bindfocus='focus' bindinput='payOfferInp'></input>
   </label>
 
   

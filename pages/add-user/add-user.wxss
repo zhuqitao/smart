@@ -10,16 +10,31 @@ page {
   display: flex;
   align-items: center;
   margin: 20rpx 0;
+  min-width: 100rpx
+}
+.add-user>label .label{
+  min-width: 140rpx;
 }
 .add-user label input {
   flex: 1;
-  border: solid 1px #ddd;
+  height: 80rpx;
+  border-bottom: solid 1px #ddd;
+  font-size: 14px;
   padding: 10rpx;
-  border-radius: 10rpx
+  box-sizing: border-box;
 }
-
-.sex label, .type label{
-  min-width: 400rpx;
+.add-user label input.active{
+  border-bottom: solid 2px #1AAD19
+}
+.sex,.type{
+  display: flex;
+  margin: 20rpx 0;
+}
+.sex label,.type label{
+  width: 160rpx;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 50rpx;
 }
 .add-user .submit{
   margin: 30rpx 0 10rpx 0;

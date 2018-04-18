@@ -56,7 +56,7 @@ Page({
   },
 
   submit: function () {
-    app.ajax('https://www.meijile.xin/api/xcx/user/addWorker', 'POST', {
+    app.ajax('xcx/user/addWorker', 'POST', {
       name: this.data.name,
       sex: this.data.sex,
       address: this.data.address,
@@ -84,6 +84,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    app.ajax('xcx/user/getCheckWorker', 'POST')
   }
 })

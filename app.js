@@ -48,9 +48,10 @@ App({
     })
   },
   ajax: function (url, method, data) {
+    let baseUrl = 'https://www.meijile.xin/api/'
     return new Promise((resolve, reject) => {
       wx.request({
-        url: url,
+        url: baseUrl + url,
         method: method,
         data: data,
         header: {

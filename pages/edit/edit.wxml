@@ -6,50 +6,31 @@
   </view>
   
   <view class="user-list">
-    <view class="item">
+    <view class="item" wx:for="{{userList}}" wx:key="{{item.id}}">
       <label class="user">
-        <checkbox></checkbox>
+        <checkbox-group data-workerId="{{item.id}}" data-index="{{index}}" bindchange="checkUser">
+          <checkbox value="{{index}}"></checkbox>
+        </checkbox-group>
+        
         <view class="info">
-          <view class="name">张三</view>
-          <view class="address">济南</view>
+          <view class="name">{{item.name}}</view>
+          <view class="sex">-{{item.sex===1?'男':'女'}}</view>
+          <view class="address">-{{item.address}}</view>
         </view>
       </label>
       <label class="tem">
         <view class="info">临时结账</view>
-        <checkbox></checkbox>
+        <checkbox-group data-workerId="{{item.id}}" data-index="{{index}}" bindchange="checkTem">
+          <checkbox value="{{index}}"></checkbox>
+        </checkbox-group>
+        
       </label>
     </view>
 
-    <view class="item">
-      <label class="user">
-        <checkbox></checkbox>
-        <view class="info">
-          <view class="name">张三</view>
-          <view class="address">济南</view>
-        </view>
-      </label>
-      <label class="tem">
-        <view class="info">临时结账</view>
-        <checkbox></checkbox>
-      </label>
-    </view>
-
-    <view class="item">
-      <label class="user">
-        <checkbox></checkbox>
-        <view class="info">
-          <view class="name">张三</view>
-          <view class="address">济南</view>
-        </view>
-      </label>
-      <label class="tem">
-        <view class="info">临时结账</view>
-        <checkbox></checkbox>
-      </label>
-    </view>
+    
     
   </view>
   <view class="submit">
-    <button type="primary">确定</button>
+    <button type="primary" bindtap='submit'>确定</button>
   </view>
 </view>

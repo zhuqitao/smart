@@ -41,7 +41,7 @@ page{
 .user-list .item.active .content{
   background-color: #7BD8C5;
 }
-.user-list .item.active .content .tem{
+.user-list .item .content .tem.active{
   background-color: #FFA3A3;
 }
 

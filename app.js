@@ -5,27 +5,9 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-
+    
     // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        wx.request({
-          url: 'https://www.meijile.xin/api/xcx/login',
-          method: 'POST',
-          header: {
-            'content-type': 'application/x-www-form-urlencoded' // 默认值
-          },
-          data: {
-            code: res.code
-          },
-          success: res => {
-            this.globalData.token = res.data.body.token
-          }
-        })
-        
-      }
-    })
+    // this.login()
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -47,6 +29,46 @@ App({
       }
     })
   },
+  
+  // 登录
+  login: function () {
+    return new Promise((resolve, reject) => {
+      wx.login({
+        success: res => {
+          // 发送 res.code 到后台换取 openId, sessionKey, unionId
+
+          wx.request({
+            url: 'https://www.meijile.xin/api/xcx/login',
+            method: 'POST',
+            header: {
+              'content-type': 'application/x-www-form-urlencoded'
+            },
+            data: {
+              code: res.code
+            },
+            success: res => {
+              if (res.data.success) {
+                this.globalData.token = res.data.body.token
+                wx.setStorageSync('token', res.data.body.token)
+              }
+              resolve(res)
+            },
+            fail: err => {
+              wx.showToast({
+                title: '登录异常',
+                icon: 'none'
+              })
+              reject(err)
+            }
+          })
+
+        }
+      })
+    })
+    
+  },
+
+  // Promise请求
   ajax: function (url, method, data) {
     let baseUrl = 'https://www.meijile.xin/api/'
     return new Promise((resolve, reject) => {
@@ -55,7 +77,7 @@ App({
         method: method,
         data: data,
         header: {
-          'Authentication': this.globalData.token, // 默认值
+          'Authentication': wx.getStorageSync('token'), // 默认值
           "content-type": method === 'POST' ? "application/x-www-form-urlencoded" :"application/json"
         },
         success: res => {

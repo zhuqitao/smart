@@ -15,10 +15,15 @@
     <input class="{{state==3?'active':''}}" data-state="3" bindfocus='focus' bindinput='addressInp'></input>
   </label>
 
-  <label class="payOffer">
+  <!-- <label class="payOffer">
     <view class="label">工资标准：</view>
     <input class="{{state==4?'active':''}}" data-state="4" bindfocus='focus' bindinput='payOfferInp'></input>
-  </label>
+  </label> -->
+   <picker value="{{offerIndex}}" range="{{workerOffer}}" range-key="info" bindchange="offerChange">
+    <view class="picker">
+      工资标准：{{workerOffer[offerIndex].info}}
+    </view>
+  </picker> 
 
   
   

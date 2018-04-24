@@ -1,11 +1,46 @@
 /**index.wxss**/
 page{
-    background-color: #FAF8F8;
+    background-color: #fff;
+}
+.body{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.self{
+  width: 100%;
+  height: 160rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20rpx;
+  border-bottom: solid 1px #ddd;
+}
+.self .head-img{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.self .name{
+  font-size: 14px;
+}
+.title {
+  padding: 10rpx;
+  color: #666;
+  font-size: 14px;
+  border-bottom: solid 1px #ddd;
+}
+.hr{
+  margin-top: 5rpx;
+  background-color: #ddd;
+  height: 10rpx;
 }
 .user-list {
+  flex: 1;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  background-color: #f8f8f8;
 }
 
 .user-list .item{
@@ -30,6 +65,7 @@ page{
   justify-content: space-around;
   overflow: hidden;
   box-shadow: 0 0 10px #999;
+  background-image:radial-gradient(at 50% 78%, #fea6fc 8%,#c95ceb ,#5b0491 );
 }
 .user-list .item .content .tem{
   padding: 5rpx 0;
@@ -45,3 +81,43 @@ page{
   background-color: #FFA3A3;
 }
 
+.no-staff{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #999;
+}
+.sigh{
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: 100rpx;
+  text-align: center;
+  line-height: 200rpx;
+  border: solid 8px #666;
+  border-radius: 50%;
+  font-size: 60px;
+  color: #444;
+  font-weight: 900;
+}
+.no-staff .info {
+  margin: 40rpx 0;
+  color: #333;
+  font-size: 14px;
+}
+.show-detail{
+  width: 100rpx;
+  height: 100rpx;
+  position: fixed;
+  bottom: 50rpx;
+  right: 30rpx;
+}
+.loading{
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

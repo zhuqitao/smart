@@ -12,7 +12,7 @@
 
   <view class="hr"></view>
 
-  <view class="user-list" wx:if="{{userList.length>0}}">
+  <view class="user-list" wx:if="{{checkWorkdata!==null}}">
     <view class="item active" wx:for="{{userList}}" wx:key="name">
       <view class="content">
         

@@ -4,8 +4,9 @@ const app = getApp()
 
 Page({
   data: {
-    userInfo: {},
-    userList: [],
+    userInfo: {},       // 登录用户信息
+    userList: [],       // 出勤人员
+    checkWorkdata: {},  // 出勤总体情况
     loading: true
   },
   //事件处理函数
@@ -30,6 +31,7 @@ Page({
         wx.hideLoading()
         this.setData({
           userList: res.data.body.checkWorkJoindata,
+          checkWorkdata: res.data.body.checkWorkdata,
           loading: false
         })
       })

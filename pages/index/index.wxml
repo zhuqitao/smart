@@ -2,12 +2,18 @@
 <view class="body" wx:if="{{!loading}}">
 
   <view class="self">
-    <image class="head-img" src="{{userInfo.avatarUrl}}"></image>
-    <view class="name">{{userInfo.nickName}}</view>
-  </view>
-
-  <view class="title">
-    今日出勤人员列表 >
+    <view class="self-info">
+      <image class="head-img" src="{{userInfo.avatarUrl}}"></image>
+      <view class="name">{{userInfo.nickName}}</view>
+    </view>
+    <view class="total-info">
+      <view class="time">2018-4-25</view>
+      <view class="box">
+        <view class="total">总人数：{{checkWorkdata.totalNumber}}</view>
+        <view class="total-man">男：{{checkWorkdata.totalManNumber}}</view>
+        <view class="total-woman">女：{{checkWorkdata.totalFemaleNumber}}</view>
+      </view>
+    </view>
   </view>
 
   <view class="hr"></view>
@@ -15,11 +21,11 @@
   <view class="user-list" wx:if="{{checkWorkdata!==null}}">
     <view class="item active" wx:for="{{userList}}" wx:key="name">
       <view class="content">
-        
         <view class="name">{{item.workerName}}</view>
-        <!-- <view class="tem {{item.type===1?'active':''}}">{{item.type===1?'临时结账':'未结账'}}</view> -->
+        <view class="tem" wx:if="{{item.type===1}}">临</view> 
         <view class="sex">{{item.sex===1?'男':'女'}}</view>
       </view>
+      
     </view>
     
   </view>
@@ -31,6 +37,5 @@
     </view>
   </view>
 
-  <image class="show-detail" src="../../img/detail.png"></image>
 </view>
 <view class="loading" wx:else></view>
